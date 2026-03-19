@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Animal extends Model
+{
+    protected $fillable = [
+        'name',
+        'species_id',
+        'age',
+        'weight',
+        'height',
+        'habitat_id',
+        'category_id',
+        'need_id',
+        'description',
+    ];
+
+    public function species()
+    {
+        return $this->belongsTo(Species::class);
+    }
+
+    public function habitat()
+    {
+        return $this->belongsTo(Habitat::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function need()
+    {
+        return $this->belongsTo(Need::class);
+    }   
+}
