@@ -3,13 +3,20 @@
 use App\Livewire\Pages\Role\CreateRole;
 use App\Livewire\Pages\Role\EdithRole;
 use App\Livewire\Pages\Role\ViewRole;
+use App\Models\Animal;
 use Illuminate\Support\Facades\Route;
 
 
-Route::prefix('admin')->group(function()
+Route::prefix('admin')
+->group(function()
+
 {
     Route::get('/roles',ViewRole::class)->name('admin.role.view');
     Route::get('/roles/create',CreateRole::class)->name('admin..role.create');
     Route::get('/roles/create/{role}',EdithRole::class)->name('admin..role.create');
+
+    // Route::get('/create/animal',Animal::class)->name('admin.animal.create');
+    // Route::get('/update/animal/{id}',Animal::class)->name('admin.animal.create');
+    // Route::get('/view/animal',Animal::class)->name('admin.animal.create');
 
 });
