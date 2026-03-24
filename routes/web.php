@@ -13,12 +13,15 @@ use App\Livewire\Pages\Admin\Role\ViewRole;
 use App\Livewire\Pages\Admin\User\CreateUser;
 use App\Livewire\Pages\Admin\User\EditUser;
 use App\Livewire\Pages\Admin\User\IndexUser;
+use App\Livewire\Pages\Auth\Login;
+use App\Livewire\Pages\Auth\Register;
 use App\Livewire\Pages\Public\Index;
 use App\Models\Animal;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', Index::class)->name('home');
+<<<<<<< HEAD
 Route::get('/blog',Blog::class)->name('blog.page');
 Route::get('/animal',Animal::class)->name('animal.page');
 
@@ -39,6 +42,12 @@ Route::prefix('zookeeper')
 
 });
 
+=======
+Route::get('/login', Login::class)->name('login.page');
+Route::get('/register', Register::class)->name('register.page');
+
+
+>>>>>>> 2c0c7ad6d8672cbe9d8ca78436fef7bf0169168a
 
 
 Route::prefix('admin')
